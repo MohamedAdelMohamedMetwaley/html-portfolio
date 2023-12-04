@@ -3,39 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Resume</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@0;1&family=Roboto&family=Vollkorn&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <title>Mohamed Adel</title>
 </head>
 <body>
-    <h2>Mohamed Adel Mohamed</h2>
+    <!-- navbar -->
+    <div class="nav">
+        <ul>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">About Me</a></li>
+            <li><a href="#contact">Contact Me</a></li>
+        </ul>
+    </div>
+    <!-- Top Hero -->
+    <div class="top-container" id="top">
+        <h1 class="top-text libre-text">I'm Mohammed</h1>
+        <h2 class="roboto-text top-secondary-text">a web developer</h2>
+    </div>
+    <!-- Bio -->
+    <div class="middle">
+        <img src="./images/profile-img.jpg" alt="profile" class="profile">
+        <h2 class="roboto-text">Hello.</h2>
+        <p class="libre-text middle-p">I'm a passionate web developer, with an appetite <span><br></span>for learning new things (and delicious food).</p>
+    </div>
+    <!-- Skills  -->
+    <h2 class="middle-h2 roboto-text">My Skills</h2>
+    <div class="middle" id="skills">
+        <div class="skill-field">    
+            <p class="libre-text">HTML</p>
+        </div>
+        <img src="./images/html.png" alt="html" height="45px">
+        <div class="skill-field">
+            <p class="libre-text">CSS</p>
+        </div>
+        <img src="./images/css.png" alt="css" height="45px">
+        
+        <div class="skill-field">    
+            <p class="libre-text">Javascript</p>
+        </div>
+        <img src="./images/javascript.png" alt="javascript" height="45px">
+        <div class="skill-field">
+            <p class="libre-text">Java</p>
+        </div>
+        <img src="./images/java.png" alt="java" height="45px">
+    </div>
+    <!-- Eduaction -->
+    <h2 class="middle-h2 roboto-text">Education</h2>
+    <div class="middle" id="education">
+        
+        <p class="univ-description libre-text">Bachelor's Degree in Statistics and Computer Science <span><br></span>
+        Faculty of Science - Alexandria University, Egypt (2021-2025).</p>
+        <img class="univ-image" src="./images/alexandria-univ.jpg" alt="alexandria-university" height="500px">
+    </div>
+    <!-- Projects -->
+    <div id="projects">
 
-    <img src="./assets/images/ProfilePhoto.png" height="150" alt="">
-    <h3>A passionate Web Developer with an appetite for learning new things (and eating well-cooked food)</h3>
-    <hr>
-    <h3>Education:</h3>
-        <ul>
-            <li>Bachelor's Degree in Statistics and Computer Science</li><br>
-            Faculty of Science - Alexandria University, Egypt (2021-2025)
-        </ul>
-    <h3>Work Experience:</h3>
-        <ul>
-            <li>Telemarketer at Proper Buisness Solutions (USA Real Estate Account) (2 month)</li>
-            <li>Marketer at Benchmark (4 month)</li>
-        </ul>
-    <h3>Skills:</h3>
-        <ul>
-            <li>Java Programming (Intermediate)</li>
-            <li>Problem Solving (Intermediate)</li>
-            <li>HTML & CSS (Beginner)</li>
-            <li>Managing SQL Databases (Beginner)</li>
-            <li>Javascript (Beginner)</li>
-            <li>C++ Programming (Beginner)</li>
-            <li>Fast Typing</li>
-            <li>English Fluency</li>
-        </ul>
-    <br><hr>
-    <a href="./public/Hobbies.html">My Hobbies</a> <a href="./public/Contact.html">Contact Me</a>
-    <footer>
-        <p>© Mohamed Adel. All rights reserved.</p>
-    </footer>
+    </div>
+    <!-- About Me -->
+    <div id="about">
+
+    </div>
+    <!-- Contact Me -->
+    <div id="contact">
+
+    </div>
+    <!-- Footer -->
+    <div id="footer">
+
+    </div>
 </body>
 </html>
