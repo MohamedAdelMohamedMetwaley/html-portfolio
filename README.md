@@ -1,2 +1,2 @@
-# html-portfolio
-A simple resume website using html
+# personal-website
+A website using html&css
