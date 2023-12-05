@@ -4,21 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@0;1&family=Roboto&family=Vollkorn&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Roboto&family=Vollkorn&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
     <title>Mohamed Adel</title>
 </head>
 <body>
     <!-- navbar -->
-    <div class="nav">
-        <ul>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#education">Education</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">About Me</a></li>
-            <li><a href="#contact">Contact Me</a></li>
-        </ul>
+    <div class="nav roboto-text">
+        <div><a href="#skills">Skills</a></div>
+        <div><a href="#education">Education</a></div>
+        <div><a href="#projects">Projects</a></div>
+        <!-- <div><a href="#contact">About Me</a></div> -->
+        <div><a href="#contact">Contact Me</a></div>
     </div>
     <!-- Top Hero -->
     <div class="top-container" id="top">
@@ -29,29 +27,40 @@
     <div class="middle">
         <img src="./images/profile-img.jpg" alt="profile" class="profile">
         <h2 class="roboto-text">Hello.</h2>
-        <p class="libre-text middle-p">I'm a passionate web developer, with an appetite <span><br></span>for learning new things (and delicious food).</p>
+        <p class="libre-text middle-p">I'm a passionate web developer, with an appetite <span><br></span>for reading, learning new things and eating delicious food.</p>
     </div>
     <!-- Skills  -->
     <h2 class="middle-h2 roboto-text">My Skills</h2>
     <div class="middle" id="skills">
         <div class="skill-field">    
-            <p class="libre-text">HTML</p>
+            <p class="libre-text">Using HTML and CSS to create beautiful and responsive websites</p>
         </div>
-        <img src="./images/html.png" alt="html" height="45px">
-        <div class="skill-field">
-            <p class="libre-text">CSS</p>
+        <div>
+            <img src="./images/html.png" alt="html" height="45px">
+            <img id="cssImg" src="./images/css.png" alt="css" height="45px">
         </div>
-        <img src="./images/css.png" alt="css" height="45px">
-        
         <div class="skill-field">    
-            <p class="libre-text">Javascript</p>
+            <p class="libre-text">Creating websites using Bootstrap</p>
         </div>
-        <img src="./images/javascript.png" alt="javascript" height="45px">
+        <img id="bootstrapImg" src="./images/bootstrap.png" alt="bootstrap" height="45px">
+        <div class="skill-field">    
+            <p class="libre-text">Adding dynamicity to websites using Javascript</p>
+        </div>
+        <img id="jsImg" src="./images/javascript.png" alt="javascript" height="45px">
         <div class="skill-field">
-            <p class="libre-text">Java</p>
+            <p id="javaText" class="libre-text">Backend programming using Java</p>
         </div>
-        <img src="./images/java.png" alt="java" height="45px">
+        <img id="javaImg" src="./images/java.png" alt="java" height="45px">
+        <div class="skill-field">
+            <p id="javaText" class="libre-text">Problem solving skills</p>
+        </div>
+        <img id="psImg" src="./images/problem-solving.png" alt="problem-solving" height="45px">
+        <div class="skill-field">
+            <p id="javaText" class="libre-text">Efficient use of Git and Github</p>
+        </div>
+        <img id="psImg" src="./images/github.png" alt="github" height="45px">
     </div>
+    
     <!-- Eduaction -->
     <h2 class="middle-h2 roboto-text">Education</h2>
     <div class="middle" id="education">
@@ -61,20 +70,43 @@
         <img class="univ-image" src="./images/alexandria-univ.jpg" alt="alexandria-university" height="500px">
     </div>
     <!-- Projects -->
-    <div id="projects">
-
+    <h2 class="middle-h2 roboto-text">Projects</h2>
+    <div class="gradient-background" id="projects">
+        <div>
+            <h2>TinDog</h2>
+            <div class="image-portrait">
+                <a href="./public/TinDog/index.html"><img src="./images/tindog.png" alt="tindog" height="200px"></a>
+                
+            </div>
+            <p class="libre-text">Website built using Bootstrap <span><br></span>[Class Project]</p>
+        </div>
+        <div>
+            <h2>Mondrian Project</h2>
+            <div class="image-portrait">
+                <a href="./public/Mondrian/index.html"><img src="./images/mondrian.png" alt="mondrian" height="200px"></a>
+            </div>
+            <p class="libre-text">Replicating Piet Mondrian's famous art piece using CSS grid [Class Project]</p> 
+        </div>
     </div>
     <!-- About Me -->
     <div id="about">
 
     </div>
     <!-- Contact Me -->
+    <h2 class="contact-h2 roboto-text">Contact Me</h2>
     <div id="contact">
-
+        <p class="vollkorn-text">If you are interested in making attractive websites or love reading books or talking about life, feel free to email me at any time. I'd love to share my thoughts and ideas with you.</p>
+        <a href="mailto:@mohamedadelzmd@gmail.com"><h2 class="contact-btn roboto-text">Send an Email</h2></a>
     </div>
     <!-- Footer -->
     <div id="footer">
-
+        <p class="vollkorn-text">© 2023 Mohamed Adel</p>
+        <div>
+            <a href="https://github.com/MohamedAdelMohamedMetwaley"><img src="./images/githubLink.png" alt="github" height="25px"></a>
+        <a href="https://www.facebook.com/profile.php?id=100014562786354"><img src="./images/facebook.png" alt="facebook" height="25px"></a>
+        <a href=""><img src="" alt=""></a>
+        </div>
+        
     </div>
 </body>
 </html>

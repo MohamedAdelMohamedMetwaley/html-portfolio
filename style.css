@@ -1,6 +1,6 @@
 html{
     scroll-behavior: smooth;
-    scroll-padding: 5rem;
+    scroll-padding: 10rem;
 }
 body{
     margin: 0;
@@ -16,41 +16,36 @@ body > *{
 }
 .nav{
     display: flex;
-    justify-content: space-evenly;
-    gap: 10px;
+    justify-content: center;
+    gap: 30px;
     position: sticky;
     top: 0;
-    border-radius: 0px 0px 15px 15px;
+    border-radius: 0px 0px 20px 20px;
     background-color: #222831;
     color: #EEEEEE;
     margin: -29px -1px;
     opacity: 0.95;
+    padding: 10px;
+    font-size: 17px;
 }
-li > a{
-    text-decoration: none;
+.nav a{
     color: #00ADB5;
     font-weight: bold;
-    font-family: 'Roboto', sans-serif;
-    
+    margin: 10px 5px;
 }
-ul {
-    list-style: none;
-    padding-left: 0;
+a{
+    text-decoration: none;
 }
-li{
-    float: left;
-    margin: 0px 20px;
-}
-
 .top-container{
     text-align: center;
     background-color: #00ADB5;
     color: #222831;
+    padding: 200px 100px  1px;
     padding-top: 200px;
     padding-bottom: 100px;
 }
 .top-text{
-    font-size: 75px;
+    font-size: 65px;
     margin: 0;
 }
 .middle{
@@ -67,6 +62,10 @@ li{
 }
 .libre-text{
     font-family: 'Libre Baskerville', serif;
+    letter-spacing: 0.5px;
+}
+.vollkorn-text{
+    font-family: 'Vollkorn', serif;
 }
 .middle-h2{
     color: #00ADB5;
@@ -92,30 +91,121 @@ li{
     border-radius: 10px;
     color: #046368;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 15px;
 }
 #education{
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+.gradient-background {
+    background: linear-gradient(300deg, #046e92, #3025cd, rgb(106, 0, 255));
+    background-size: 180% 180%;
+    animation: gradient-animation 18s ease infinite;
+  }
+#projects{
+    height: 500px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    font-weight: bold;
+    color: #EEEEEE;
+}
+#projects p{
+    width: 350px;
+}
+.image-portrait{
+    padding: 10px;
+    border: 5px double #EEEEEE;
+}
+.contact-h2{
+    display: block;
+    width: auto;
+    color: #3025cd;
+    font-size: 45px;
+    margin-top: 200px;
+    
+}
+#contact{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+#contact > p{
+    width: 600px;
+    font-size: 20px;
+}
+.contact-btn{
+    border-radius: 15px;
+    background-color: #046e92;
+    color: #EEEEEE;
+    font-weight: normal;
+    font-size: 20px;
+    width: fit-content;
+    padding: 15px;
+    margin-top: 50px;
+    margin-bottom: 150px;
+}
+.contact-btn:hover{
+    background-color: #00ADB5;
+}
 
+#footer{
+    background-color: #046e92;
+    color: #EEEEEE;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#footer > p{
+    padding-left: 15%;
+}
+#footer > div{
+    padding-right: 15%;
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 10px;
+}
+  
+@keyframes gradient-animation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+}
 
 
 @media (max-width: 830px){
+    .nav{
+        justify-content: space-around;
+    }
     #skills{
         width: 100%;
     }
     .univ-image{
         height: 400px;
     }
+    #projects{
+        height: 800px;
+        flex-direction: column;
+    }
+    #footer > p{
+        padding-left: 10%;
+    }
+    #footer > div{
+        padding-right: 10%;
+    }
 }
 @media (max-width: 676px){
     .nav{
-        font-size: 15px;
-    }
-    li{
-        margin: 0 10px;
+        font-size: 14px;
     }
     .top-text{
         font-size: 40px;
@@ -129,13 +219,22 @@ li{
     #education > p{
         width: 80%;
     }
+    #contact > p{
+        width: 80%;
+    }
 }
 @media (max-width: 400px){
-    li{
-        font-size: 10px;
-        margin: 0 3px;
+    .nav a{
+        /* font-size: 10px; */
+        margin: 16px 0px;
     }
     .univ-image{
         height: 150px;
+    }
+    #skills{
+        column-gap: 10px;
+    }
+    #skills img{
+        height: 35px;
     }
 }
