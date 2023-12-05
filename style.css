@@ -22,12 +22,12 @@ body > *{
     gap: 30px;
     position: sticky;
     top: 0;
-    border-radius: 0px 0px 20px 20px;
+    border-radius: 0px 0px 5px 5px;
     background-color: #222831;
     color: #EEEEEE;
     margin: -29px -1px;
     opacity: 0.95;
-    padding: 10px;
+    padding: 15px 10px;
     font-size: 17px;
     -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
     -moz-box-sizing: border-box;    /* Firefox, other Gecko */
