@@ -1,2 +1,2 @@
 # personal-website
-A website using html&css
+This is a resume website built using html & css
