@@ -33,6 +33,15 @@ body > *{
     -moz-box-sizing: border-box;    /* Firefox, other Gecko */
     box-sizing: border-box; 
 }
+/* .nav > div{
+    width: 100%;
+    text-align: center;
+    padding: 15px 10px;
+    margin: 0;
+    background-color: #222831;
+    border-radius:5px;
+} */
+
 .nav a{
     color: #00ADB5;
     font-weight: bold;
@@ -68,7 +77,7 @@ a{
 }
 .libre-text{
     font-family: 'Libre Baskerville', serif;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.7px;
 }
 .vollkorn-text{
     font-family: 'Vollkorn', serif;
@@ -105,26 +114,48 @@ a{
     align-items: center;
 }
 .gradient-background {
-    background: linear-gradient(300deg, #046e92, #3025cd, rgb(106, 0, 255));
+    background: linear-gradient(300deg, #32ccff, #0c0575, rgb(151, 87, 242));
     background-size: 180% 180%;
     animation: gradient-animation 18s ease infinite;
-  }
+}
+
+#projects-outer{
+    margin-top: 150px;
+}
+
 #projects{
-    height: 500px;
+    height: max-content;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
     text-align: center;
     font-weight: bold;
     color: #EEEEEE;
+    padding-bottom: 125px;
 }
-#projects p{
-    width: 350px;
+#projects-h2{
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+    color: #00ADB5;
+    font-size: 35px;
+    width: fit-content;
+    margin: 75px auto;
 }
+
 .image-portrait{
     padding: 10px;
     border: 5px double #EEEEEE;
 }
+
+#projects p{
+    width: 350px;
+}
+
+
 .contact-h2{
     display: block;
     width: auto;
@@ -199,8 +230,8 @@ a{
         height: 400px;
     }
     #projects{
-        height: 800px;
         flex-direction: column;
+        justify-content: space-evenly;
     }
     #footer > p{
         padding-left: 10%;
