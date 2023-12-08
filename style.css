@@ -148,7 +148,6 @@ a{
     width: 350px;
 }
 
-
 .contact-h2{
     display: block;
     width: auto;
@@ -169,13 +168,13 @@ a{
     font-size: 20px;
     margin-bottom: 50px;
 }
-.contact-btn{
+
+.contact-btn {
     border-radius: 15px;
     background-color: #046e92;
     color: #EEEEEE;
     font-weight: normal;
     font-size: 20px;
-    width: fit-content;
     padding: 15px;
 }
 .contact-btn:hover{
