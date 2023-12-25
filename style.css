@@ -20,18 +20,18 @@ body > *{
     display: flex;
     justify-content: center;
     gap: 30px;
-    position: sticky;
+    position: fixed;
     top: 0;
     border-radius: 0px 0px 5px 5px;
     background-color: #222831;
     color: #EEEEEE;
-    margin: -29px -1px;
-    opacity: 0.95;
+    /* margin: -29px -1px; */
     padding: 15px 10px;
     font-size: 17px;
     -webkit-box-sizing: border-box; 
     -moz-box-sizing: border-box;    
     box-sizing: border-box; 
+    z-index: 1;
 }
 
 
@@ -100,6 +100,7 @@ a{
     color: #046368;
     font-weight: bold;
     font-size: 15px;
+    padding: 0 3px;
 }
 #education{
     display: flex;
@@ -200,7 +201,38 @@ a{
     flex-direction: row-reverse;
     gap: 10px;
 }
-  
+.not-rotated{
+    font-size: 5px;
+}
+.rotate{
+    font-size: 25px;
+    rotate: 720deg;
+    transition: all 0.75s;
+}
+
+.hidden, .hiddenR{
+    opacity: 0;
+    filter: blur(3px);
+    transition: all 1.5s;
+}
+
+.hidden{
+    transform: translate(-100%);
+}
+.hiddenR{
+    transform: translate(100%);
+}
+.show{
+    opacity: 1;
+    filter: blur(0px);
+    transform: translate(0);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .hidden {
+      transition: all 1s;
+    }
+}
 @keyframes gradient-animation {
     0% {
       background-position: 0% 50%;
@@ -212,8 +244,6 @@ a{
       background-position: 0% 50%;
     }
 }
-
-
 @media (max-width: 830px){
     .nav{
         justify-content: space-around;
