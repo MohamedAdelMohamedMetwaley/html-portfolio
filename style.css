@@ -144,6 +144,12 @@ a{
     padding: 10px;
     border: 5px double #EEEEEE;
 }
+.image-portrait img {
+    transition: 0.5s;
+}
+.image-portrait img:hover{
+    height: 225px;
+}
 
 #projects p{
     width: 350px;
