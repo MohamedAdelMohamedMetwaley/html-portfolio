@@ -120,14 +120,6 @@
     </div>
 </body>
 <script>
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-            entry.target.classList.toggle('show', entry.isIntersecting);
-        });
-    }, {
-        rootMargin: "0px 0px -10% 0px"
-    });
-
     const observerRotate = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
             if (entry.isIntersecting) {
@@ -136,11 +128,20 @@
         });
     });
 
-    const hiddenElements = document.querySelectorAll(".hidden");
     const rotateElements = document.querySelector(".not-rotated");
-
     observerRotate.observe(rotateElements);
-    hiddenElements.forEach((el) => observer.observe(el));
+
+    function fadeInOnScroll() {
+    const hiddenElements = document.querySelectorAll('.hidden');
+    hiddenElements.forEach(element => {
+        const rect = element.getBoundingClientRect();
+        if (rect.top >= 0 && rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)) {
+            element.classList.add('show');
+        }
+    });
+    }       
+    document.addEventListener('scroll', fadeInOnScroll);
+    document.addEventListener('DOMContentLoaded', fadeInOnScroll);
 
     document.querySelectorAll(".nav a").forEach((btn) => {
         btn.addEventListener("click", (event) => {
@@ -149,6 +150,5 @@
             console.log("smooth");
         });
     });
-
 </script>
 </html>
