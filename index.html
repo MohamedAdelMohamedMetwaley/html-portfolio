@@ -5,16 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Roboto:wght@400;700&family=Vollkorn&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="./style.css">
     <title>Mohamed Adel</title>
 </head>
 <body>
     <!-- navbar -->
     <div class="nav roboto-text">
-        <div><a class="skills" href="javascript:void(0)">Skills</a></div>
-        <div><a class="education" href="javascript:void(0)">Education</a></div>
-        <div><a class="projects-h2" href="javascript:void(0)">Projects</a></div>
-        <div><a class="contact" href="javascript:void(0)">Contact Me</a></div>
+        <div><a class="skills">Skills</a></div>
+        <div><a class="education">Education</a></div>
+        <div><a class="projects-h2">Projects</a></div>
+        <div><a class="contact">Contact Me</a></div>
     </div>
     <!-- Top Hero -->
     <div class="top-container" id="top">
@@ -24,7 +25,7 @@
     <!-- Bio -->
     <div class="middle">
         <img src="./images/profile-img.jpg" alt="profile" class="profile">
-        <h2 class="roboto-text not-rotated">Hello</h2>
+        <h2 class="roboto-text not-rotated" style="color: var(--primary-color);">Hello</h2>
         <p class="libre-text middle-p">I'm a passionate web developer, with an appetite <span><br></span>for reading, learning new things and eating delicious food.</p>
     </div>
     <!-- Skills  -->
@@ -33,35 +34,35 @@
         <div class="skill-field hidden">    
             <p class="libre-text">Using HTML and CSS to create beautiful and responsive websites</p>
         </div>
-        <img class="hiddenR" src="./images/html-css.png" alt="html&css" height="45px">
+        <img src="./images/html-css.png" alt="html&css" height="45px">
         <div class="skill-field hidden">    
             <p class="libre-text">Creating websites using Bootstrap</p>
         </div>
-        <img class="hiddenR" src="./images/bootstrap.png" alt="bootstrap" height="45px">
+        <img src="./images/bootstrap.png" alt="bootstrap" height="45px">
         <div class="skill-field hidden">    
             <p class="libre-text">Making powerful and dynamic websites using Javascript and JQuery</p>
         </div>
-        <img class="hiddenR" src="./images/javascript.png" alt="javascript" height="45px">
+        <img src="./images/javascript.png" alt="javascript" height="45px">
         <div class="skill-field hidden">    
             <p class="libre-text">Using Node.js, Express.js and EJS to create web applications</p>
         </div>
-        <img class="hiddenR" src="./images/nodejs.png" alt="nodejs" height="50px">
+        <img src="./images/nodejs.png" alt="nodejs" height="50px">
         <div class="skill-field hidden">
             <p class="libre-text">Backend programming using Java</p>
         </div>
-        <img class="hiddenR" src="./images/java.png" alt="java" height="45px">
+        <img src="./images/java.png" alt="java" height="45px">
         <div class="skill-field hidden">
             <p class="libre-text">Problem solving skills</p>
         </div>
-        <img class="hiddenR" src="./images/problem-solving.png" alt="problem-solving" height="45px">
+        <img src="./images/problem-solving.png" alt="problem-solving" height="45px">
         <div class="skill-field hidden">
             <p class="libre-text">Efficient use of Git and Github</p>
         </div>
-        <img class="hiddenR" src="./images/github.png" alt="github" height="45px">
+        <img src="./images/github.png" alt="github" height="45px">
         <div class="skill-field hidden">
             <p class="libre-text">Communication skills</p>
         </div>
-        <img class="hiddenR" src="./images/communication.png" alt="communication" height="45px">
+        <img src="./images/communication.png" alt="communication" height="45px">
     </div>
     
     <!-- Eduaction -->
@@ -73,28 +74,28 @@
         <img class="univ-image" src="./images/alexandria-univ.jpg" alt="alexandria-university" height="500px">
     </div>
     <!-- Projects -->
-    <div class="gradient-background" id="projects-outer">
-        <h2 class="roboto-text" id="projects-h2">Projects</h2>
+    <h2 class="roboto-text" id="projects-h2">Projects</h2>
+    <div class="gradient-background " id="projects-outer">
         <div id="projects">
-            <div class="">
-                <h2>TinDog</h2>
+            <div >
+                <h2 class="roboto-text">TinDog</h2>
                 <div class="image-portrait hidden">
                     <a href="./public/TinDog/index.html"><img src="./images/tindog.png" alt="tindog" height="200px"></a>
                     
                 </div>
                 <p class="libre-text hidden">Playful dog dating app, made with Bootstrap</p>
             </div>
-            <div class="">
-                <h2>Simon Game</h2>
+            <div>
+                <h2 class="roboto-text">Simon Game</h2>
                 <div class="image-portrait hidden">
                     <a href="./public/Simon Game/index.html"><img src="./images/simon-game.png" alt="simon-game" height="200px"></a>
                 </div>
                 <p class="libre-text hidden">Challenge your short-term memory with the Simon Game, made using Javascript and JQuery</p>
             </div>
-            <div class="">
-                <h2>Roller Poster</h2>
+            <div>
+                <h2 class="roboto-text">Roller Poster</h2>
                 <div class="image-portrait hidden">
-                    <a href="https://github.com/MohamedAdelMohamedMetwaley/blog-website"><img class="big-image" src="./images/Blog-Website.png" alt="blog" height="200px"></a>
+                    <a href="https://rollerposter.cyclic.app/"><img class="big-image" src="./images/Blog-Website.png" alt="blog" height="200px"></a>
                 </div>
                 <p class="libre-text hidden">Blog web application, made using Node.js, Express.js and EJS</p> 
             </div>
@@ -119,27 +120,35 @@
     </div>
 </body>
 <script>
-    // console.log(document.querySelector("[target='skills']").target)
     const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
             entry.target.classList.toggle('show', entry.isIntersecting);
-        })
-    })
+        });
+    }, {
+        rootMargin: "0px 0px -10% 0px"
+    });
+
     const observerRotate = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
-            if(entry.isIntersecting)
+            if (entry.isIntersecting) {
                 entry.target.classList.add('rotate');
-        })
-    })
-    const hiddenElements = document.querySelectorAll(".hidden, .hiddenR")
+            }
+        });
+    });
+
+    const hiddenElements = document.querySelectorAll(".hidden");
     const rotateElements = document.querySelector(".not-rotated");
-    observerRotate.observe(rotateElements)
-    hiddenElements.forEach((el) => observer.observe(el))
-    const navButtons = document.querySelectorAll(".nav a");
-    navButtons.forEach((btn) => {
+
+    observerRotate.observe(rotateElements);
+    hiddenElements.forEach((el) => observer.observe(el));
+
+    document.querySelectorAll(".nav a").forEach((btn) => {
         btn.addEventListener("click", (event) => {
-            document.getElementById(event.target.classList[0]).scrollIntoView();
-        })
-    })
+            event.preventDefault();
+            document.getElementById(event.target.classList[0]).scrollIntoView({ behavior: 'smooth' });
+            console.log("smooth");
+        });
+    });
+
 </script>
 </html>
