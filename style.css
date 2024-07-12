@@ -229,7 +229,7 @@ p{
     transition: all 0.75s;
 }
 
-.hidden{
+.hidden, .hiddenP{
     opacity: 0;
     filter: blur(3px);
     transform: translate(-10%);
@@ -242,7 +242,7 @@ p{
 }
 
 @media (prefers-reduced-motion: no-preference) {
-    .hidden {
+    .hidden, .hiddenP {
       transition: all 1s;
     }
 }

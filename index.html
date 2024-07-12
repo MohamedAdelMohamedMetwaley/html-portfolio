@@ -79,25 +79,25 @@
         <div id="projects">
             <div >
                 <h2 class="roboto-text">TinDog</h2>
-                <div class="image-portrait hidden">
+                <div class="image-portrait hiddenP">
                     <a href="./public/TinDog/index.html"><img src="./images/tindog.png" alt="tindog" height="200px"></a>
                     
                 </div>
-                <p class="libre-text hidden">Playful dog dating app, made with Bootstrap</p>
+                <p class="libre-text hiddenP">Playful dog dating app, made with Bootstrap</p>
             </div>
             <div>
                 <h2 class="roboto-text">Simon Game</h2>
-                <div class="image-portrait hidden">
+                <div class="image-portrait hiddenP">
                     <a href="./public/Simon Game/index.html"><img src="./images/simon-game.png" alt="simon-game" height="200px"></a>
                 </div>
-                <p class="libre-text hidden">Challenge your short-term memory with the Simon Game, made using Javascript and JQuery</p>
+                <p class="libre-text hiddenP">Challenge your short-term memory with the Simon Game, made using Javascript and JQuery</p>
             </div>
             <div>
                 <h2 class="roboto-text">Roller Poster</h2>
-                <div class="image-portrait hidden">
+                <div class="image-portrait hiddenP">
                     <a href="https://rollerposter.cyclic.app/"><img class="big-image" src="./images/Blog-Website.png" alt="blog" height="200px"></a>
                 </div>
-                <p class="libre-text hidden">Blog web application, made using Node.js, Express.js and EJS</p> 
+                <p class="libre-text hiddenP">Blog web application, made using Node.js, Express.js and EJS</p> 
             </div>
         </div>
     </div>
@@ -131,17 +131,31 @@
     const rotateElements = document.querySelector(".not-rotated");
     observerRotate.observe(rotateElements);
 
-    function fadeInOnScroll() {
-    const hiddenElements = document.querySelectorAll('.hidden');
-    hiddenElements.forEach(element => {
-        const rect = element.getBoundingClientRect();
-        if (rect.top >= 0 && rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)) {
-            element.classList.add('show');
-        }
+    const hiddenElements = document.querySelectorAll(".hidden");
+    const hiddenPElements = document.querySelectorAll(".hiddenP");
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('show');
+                if(entry.target.classList.contains("hiddenP"))
+                    triggerChainAnimation(hiddenPElements);
+                else triggerChainAnimation(hiddenElements);
+                observer.unobserve(entry.target); // Stop observing the first element
+            }
+        });
     });
-    }       
-    document.addEventListener('scroll', fadeInOnScroll);
-    document.addEventListener('DOMContentLoaded', fadeInOnScroll);
+
+    observer.observe(hiddenElements[0]);
+    observer.observe(hiddenPElements[0]);
+
+    function triggerChainAnimation(element) {
+        let delay = 0;
+        element.forEach(el => {
+            setTimeout(() => el.classList.add('show'), delay);
+            delay += 200; // Adjust delay for each subsequent element
+        });
+    }
 
     document.querySelectorAll(".nav a").forEach((btn) => {
         btn.addEventListener("click", (event) => {
