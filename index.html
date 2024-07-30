@@ -1,168 +1,231 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Roboto:wght@400;700&family=Vollkorn&display=swap" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Roboto:wght@400;700&family=Vollkorn&display=swap"
+      rel="stylesheet"
+    />
 
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./style.css" />
     <title>Mohamed Adel</title>
-</head>
-<body>
+  </head>
+  <body>
     <!-- navbar -->
     <div class="nav roboto-text">
-        <div><a class="skills">Skills</a></div>
-        <div><a class="education">Education</a></div>
-        <div><a class="projects-h2">Projects</a></div>
-        <div><a class="contact">Contact Me</a></div>
+      <div><a id="section1" class="skills">Skills</a></div>
+      <div><a id="section2" class="education">Education</a></div>
+      <div><a id="section3" class="projects-h2">Projects</a></div>
+      <div><a id="section4" class="contact">Contact Me</a></div>
     </div>
     <!-- Top Hero -->
     <div class="top-container" id="top">
-        <h1 class="top-text libre-text">I'm Mohammed</h1>
-        <h2 class="roboto-text top-secondary-text">a web developer</h2>
+      <h1 class="top-text libre-text">I'm Mohammed</h1>
+      <h2 class="roboto-text top-secondary-text">a web developer</h2>
     </div>
     <!-- Bio -->
     <div class="middle">
-        <img src="./images/profile-img.jpg" alt="profile" class="profile">
-        <h2 class="roboto-text not-rotated" style="color: var(--primary-color);">Hello</h2>
-        <p class="libre-text middle-p">I'm a passionate web developer, with an appetite <span><br></span>for reading, learning new things and eating delicious food.</p>
+      <img src="./images/profile-img.jpg" alt="profile" class="profile" />
+      <h2 class="roboto-text not-rotated" style="color: var(--primary-color)">
+        Hello
+      </h2>
+      <p class="libre-text middle-p popUp">
+        I'm a passionate web developer, with an appetite<br />for reading,
+        learning new things and eating delicious food.
+      </p>
     </div>
     <!-- Skills  -->
-    <h2 class="middle-h2 roboto-text">My Skills</h2>
-    <div class="middle" id="skills">
-        <div class="skill-field hidden">    
-            <p class="libre-text">Using HTML and CSS to create beautiful and responsive websites</p>
-        </div>
-        <img src="./images/html-css.png" alt="html&css" height="45px">
-        <div class="skill-field hidden">    
-            <p class="libre-text">Creating websites using Bootstrap</p>
-        </div>
-        <img src="./images/bootstrap.png" alt="bootstrap" height="45px">
-        <div class="skill-field hidden">    
-            <p class="libre-text">Making powerful and dynamic websites using Javascript and JQuery</p>
-        </div>
-        <img src="./images/javascript.png" alt="javascript" height="45px">
-        <div class="skill-field hidden">    
-            <p class="libre-text">Using Node.js, Express.js and EJS to create web applications</p>
-        </div>
-        <img src="./images/nodejs.png" alt="nodejs" height="50px">
-        <div class="skill-field hidden">
-            <p class="libre-text">Backend programming using Java</p>
-        </div>
-        <img src="./images/java.png" alt="java" height="45px">
-        <div class="skill-field hidden">
-            <p class="libre-text">Problem solving skills</p>
-        </div>
-        <img src="./images/problem-solving.png" alt="problem-solving" height="45px">
-        <div class="skill-field hidden">
-            <p class="libre-text">Efficient use of Git and Github</p>
-        </div>
-        <img src="./images/github.png" alt="github" height="45px">
-        <div class="skill-field hidden">
-            <p class="libre-text">Communication skills</p>
-        </div>
-        <img src="./images/communication.png" alt="communication" height="45px">
+    <h2 class="middle-h2 roboto-text popUp">My Skills</h2>
+    <div class="middle section" id="skills">
+      <div class="skill-field autoShow">
+        <p class="libre-text">
+          Using HTML and CSS to create beautiful and responsive websites
+        </p>
+      </div>
+      <img
+        class="autoShow"
+        src="./images/html-css.png"
+        alt="html&css"
+        height="45px"
+      />
+      <div class="skill-field autoShow">
+        <p class="libre-text">Creating websites using Bootstrap</p>
+      </div>
+      <img
+        class="autoShow"
+        src="./images/bootstrap.png"
+        alt="bootstrap"
+        height="45px"
+      />
+      <div class="skill-field autoShow">
+        <p class="libre-text">
+          Making powerful and dynamic websites using Javascript and JQuery
+        </p>
+      </div>
+      <img
+        class="autoShow"
+        src="./images/javascript.png"
+        alt="javascript"
+        height="45px"
+      />
+      <div class="skill-field autoShow">
+        <p class="libre-text">
+          Using Node.js, Express.js and EJS to create web applications
+        </p>
+      </div>
+      <img
+        class="autoShow"
+        src="./images/nodejs.png"
+        alt="nodejs"
+        height="50px"
+      />
+      <div class="skill-field autoShow">
+        <p class="libre-text">Backend programming using Java</p>
+      </div>
+      <img class="autoShow" src="./images/java.png" alt="java" height="45px" />
+      <div class="skill-field autoShow">
+        <p class="libre-text">Problem solving skills</p>
+      </div>
+      <img
+        class="autoShow"
+        src="./images/problem-solving.png"
+        alt="problem-solving"
+        height="45px"
+      />
+      <div class="skill-field autoShow">
+        <p class="libre-text">Efficient use of Git and Github</p>
+      </div>
+      <img
+        class="autoShow"
+        src="./images/github.png"
+        alt="github"
+        height="45px"
+      />
+      <div class="skill-field autoShow">
+        <p class="libre-text">Communication skills</p>
+      </div>
+      <img
+        class="autoShow"
+        src="./images/communication.png"
+        alt="communication"
+        height="45px"
+      />
     </div>
-    
+
     <!-- Eduaction -->
-    <h2 class="middle-h2 roboto-text">Education</h2>
-    <div class="middle" id="education">
-        
-        <p class="univ-description libre-text">Bachelor's Degree in Statistics and Computer Science <span><br></span>
-        Faculty of Science - Alexandria University, Egypt (2021-2025).</p>
-        <img class="univ-image" src="./images/alexandria-univ.jpg" alt="alexandria-university" height="500px">
+    <h2 class="middle-h2 roboto-text popUp">Education</h2>
+    <div class="middle section" id="education">
+      <p class="univ-description libre-text">
+        Bachelor's Degree in Statistics and Computer Science
+        <span><br /></span> Faculty of Science - Alexandria University, Egypt
+        (2021-2025).
+      </p>
+      <img
+        class="univ-image"
+        src="./images/alexandria-univ.jpg"
+        alt="alexandria-university"
+        height="500px"
+      />
     </div>
     <!-- Projects -->
-    <h2 class="roboto-text" id="projects-h2">Projects</h2>
-    <div class="gradient-background " id="projects-outer">
-        <div id="projects">
-            <div >
-                <h2 class="roboto-text">TinDog</h2>
-                <div class="image-portrait hiddenP">
-                    <a href="./public/TinDog/index.html"><img src="./images/tindog.png" alt="tindog" height="200px"></a>
-                    
-                </div>
-                <p class="libre-text hiddenP">Playful dog dating app, made with Bootstrap</p>
-            </div>
-            <div>
-                <h2 class="roboto-text">Simon Game</h2>
-                <div class="image-portrait hiddenP">
-                    <a href="./public/Simon Game/index.html"><img src="./images/simon-game.png" alt="simon-game" height="200px"></a>
-                </div>
-                <p class="libre-text hiddenP">Challenge your short-term memory with the Simon Game, made using Javascript and JQuery</p>
-            </div>
-            <div>
-                <h2 class="roboto-text">Roller Poster</h2>
-                <div class="image-portrait hiddenP">
-                    <a href="https://rollerposter.cyclic.app/"><img class="big-image" src="./images/Blog-Website.png" alt="blog" height="200px"></a>
-                </div>
-                <p class="libre-text hiddenP">Blog web application, made using Node.js, Express.js and EJS</p> 
-            </div>
+    <h2 class="roboto-text popUp" id="projects-h2">Projects</h2>
+    <div class="gradient-background section" id="projects-outer">
+      <div id="projects">
+        <div>
+          <h2 class="roboto-text">TinDog</h2>
+          <div class="image-portrait">
+            <a href="./public/TinDog/index.html"
+              ><img src="./images/tindog.png" alt="tindog" height="200px"
+            /></a>
+          </div>
+          <p class="libre-text">Playful dog dating app, made with Bootstrap</p>
         </div>
+        <div>
+          <h2 class="roboto-text">Simon Game</h2>
+          <div class="image-portrait">
+            <a href="./public/Simon Game/index.html"
+              ><img
+                src="./images/simon-game.png"
+                alt="simon-game"
+                height="200px"
+            /></a>
+          </div>
+          <p class="libre-text">
+            Challenge your short-term memory with the Simon Game, made using
+            Javascript and JQuery
+          </p>
+        </div>
+        <div>
+          <h2 class="roboto-text">Roller Poster</h2>
+          <div class="image-portrait">
+            <a href="https://rollerposter.cyclic.app/"
+              ><img
+                class="big-image"
+                src="./images/Blog-Website.png"
+                alt="blog"
+                height="200px"
+            /></a>
+          </div>
+          <p class="libre-text">
+            Blog web application, made using Node.js, Express.js and EJS
+          </p>
+        </div>
+      </div>
     </div>
 
     <!-- Contact Me -->
-    <h2 class="contact-h2 roboto-text">Contact Me</h2>
-    <div id="contact">
-        <p class="vollkorn-text">If you are interested in making attractive websites or love reading books or talking about life, feel free to email me at any time. I'd love to share my thoughts and ideas with you.</p>
-        <div class="roboto-text"><a class="contact-btn" href="mailto:mohamedadelzmd@gmail.com">Send an Email</a></div>
+    <h2 class="contact-h2 roboto-text popUp">Contact Me</h2>
+    <div style="position: relative" class="section" id="contact">
+      <p class="vollkorn-text">
+        If you are interested in making attractive websites or love reading
+        books or talking about life, feel free to email me at any time. I'd love
+        to share my thoughts and ideas with you.
+      </p>
+      <div class="roboto-text">
+        <a class="contact-btn" href="mailto:mohamedadelzmd@gmail.com"
+          >Send an Email</a
+        >
+      </div>
     </div>
     <!-- Footer -->
     <div id="footer">
-        <p class="vollkorn-text">© 2023 Mohamed Adel</p>
-        <div>
-            <a href="https://github.com/MohamedAdelMohamedMetwaley"><img src="./images/githubLink.png" alt="github" height="25px"></a>
-        <a href="https://www.facebook.com/profile.php?id=100014562786354"><img src="./images/facebook.png" alt="facebook" height="25px"></a>
-        <a href=""><img src="" alt=""></a>
-        </div>
-        
+      <p class="vollkorn-text">© 2023 Mohamed Adel</p>
+      <div>
+        <a href="https://github.com/MohamedAdelMohamedMetwaley"
+          ><img src="./images/githubLink.png" alt="github" height="25px"
+        /></a>
+        <a href="https://www.facebook.com/profile.php?id=100014562786354"
+          ><img src="./images/facebook.png" alt="facebook" height="25px"
+        /></a>
+        <a href=""><img src="" alt="" /></a>
+      </div>
     </div>
-</body>
-<script>
+  </body>
+  <script>
     const observerRotate = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('rotate');
-            }
-        });
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("rotate");
+        }
+      });
     });
 
     const rotateElements = document.querySelector(".not-rotated");
     observerRotate.observe(rotateElements);
 
-    const hiddenElements = document.querySelectorAll(".hidden");
-    const hiddenPElements = document.querySelectorAll(".hiddenP");
+    const sections = document.querySelectorAll(".section");
+    const navLinks = document.querySelectorAll(".nav a");
 
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('show');
-                if(entry.target.classList.contains("hiddenP"))
-                    triggerChainAnimation(hiddenPElements);
-                else triggerChainAnimation(hiddenElements);
-                observer.unobserve(entry.target); // Stop observing the first element
-            }
-        });
+    navLinks.forEach((btn) => {
+      btn.addEventListener("click", (event) => {
+        event.preventDefault();
+        document
+          .getElementById(event.target.classList[0])
+          .scrollIntoView({ behavior: "smooth" });
+        console.log("smooth");
+      });
     });
-
-    observer.observe(hiddenElements[0]);
-    observer.observe(hiddenPElements[0]);
-
-    function triggerChainAnimation(element) {
-        let delay = 0;
-        element.forEach(el => {
-            setTimeout(() => el.classList.add('show'), delay);
-            delay += 200; // Adjust delay for each subsequent element
-        });
-    }
-
-    document.querySelectorAll(".nav a").forEach((btn) => {
-        btn.addEventListener("click", (event) => {
-            event.preventDefault();
-            document.getElementById(event.target.classList[0]).scrollIntoView({ behavior: 'smooth' });
-            console.log("smooth");
-        });
-    });
-</script>
+  </script>
 </html>
